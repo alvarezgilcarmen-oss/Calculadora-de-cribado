@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de cribado de cáncer de cérvix</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">Conecta VPH Andalucía</div>
+    <div class="subtitle">Herramienta clínica</div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <div class="card">
+
+      <h1>Calculadora de cribado de cáncer de cérvix</h1>
+      <p class="description">
+        Basada en los algoritmos del PDPCCU. 
+        Selecciona la situación clínica y sigue los pasos para obtener la recomendación.
+      </p>
+
+      <!-- SELECTOR PRINCIPAL -->
+      <div class="form-group">
+        <label>Situación clínica</label>
+        <select id="tipo" onchange="mostrarFormulario()">
+          <option value="">Selecciona</option>
+          <option value="cribado">Cribado primario</option>
+          <option value="seguimiento">Seguimiento</option>
+        </select>
+      </div>
+
+      <!-- FORM DINÁMICO -->
+      <div id="formulario"></div>
+
+      <!-- BOTONES -->
+      <div class="buttons">
+        <button class="primary" onclick="calcular()">Calcular</button>
+        <button class="secondary" onclick="reiniciar()">Reiniciar</button>
+      </div>
+
+      <!-- RESULTADO -->
+      <div id="resultado" class="resultado hidden"></div>
+
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
